@@ -1,0 +1,11 @@
+.allcards{
+    color: white;
+}
+.singlecard{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.singlecard p{
+    text-align: justify;
+}
