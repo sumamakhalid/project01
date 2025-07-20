@@ -1,29 +1,19 @@
-import React from "react";
-import ReactDom from "react-dom"    
 import './css/experience.css'
 
-function Experience([experiences]){
-    return(
-         <>
-         <div className="allcards">
-            {experiences.map(
-                (exp,index) =>(
-                    <div className="singlecard">
-                <h1>{exp.title}</h1>
-                <br>
-                <p>
-                    {exp.dis}
-                </p>
-                </br>
-
+function Experience({ experience = [] }) {
+    return (
+        <>
+            <div className="allcards">
+                {experience.map((exp, index) => (
+                    <div className="singlecard" key={index.toString()}>
+                        <h1>{exp.title}</h1>
+                        <br />
+                        <p>{exp.dis}</p>
+                    </div>
+                ))}
             </div>
-                )
-            )}
-            
-            
-
-    </div>
-    </>
-         );
+        </>
+    );
 }
+
 export default Experience;
